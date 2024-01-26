@@ -7,7 +7,7 @@ import torch.nn as nn
 import torch.optim as optim
 import torch.nn.functional as F
 
-# helper functions for computer vision
+# functions for computer vision
 import torchvision
 import torchvision.transforms as transforms
 
