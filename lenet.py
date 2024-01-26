@@ -1,4 +1,3 @@
-# python imports
 import os
 from tqdm import tqdm
 
