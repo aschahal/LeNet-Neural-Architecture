@@ -61,7 +61,7 @@ def train_model(model, train_loader, optimizer, criterion, epoch):
     """
     model (torch.nn.module): The model is created to train
     train_loader (pytorch data loader): Training data loader
-    optimizer (optimizer.*): A instance of some sort of optimizer, usually SGD
+    optimizer (optimizer.*): An instance of some sort of optimizer, usually SGD
     criterion (nn.CrossEntropyLoss) : Loss function used to train the network
     epoch (int): Current epoch number
     """
@@ -69,7 +69,7 @@ def train_model(model, train_loader, optimizer, criterion, epoch):
     train_loss = 0.0
     for input, target in tqdm(train_loader, total=len(train_loader)):
         ###################################
-        # fill in the standard training loop of forward pass,
+        # Standard training loop of forward pass,
         # backward pass, loss computation and optimizer step
         ###################################
 
@@ -83,7 +83,6 @@ def train_model(model, train_loader, optimizer, criterion, epoch):
 
         # Update the train_loss variable
         # .item() detaches the node from the computational graph
-        # Uncomment the below line after you fill block 1 and 2
         train_loss += loss.item()
 
     train_loss /= len(train_loader)
