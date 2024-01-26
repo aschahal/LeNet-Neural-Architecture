@@ -49,7 +49,7 @@ class LeNet(nn.Module):
 
 def count_model_params():
     '''
-    return the number of trainable parameters of LeNet.
+    return the number of trainable parameters of LeNet
     '''
     model = LeNet()
     model_params = sum(p.numel() for p in model.parameters() if p.requires_grad)
@@ -59,7 +59,7 @@ def count_model_params():
 
 def train_model(model, train_loader, optimizer, criterion, epoch):
     """
-    model (torch.nn.module): The model created to train
+    model (torch.nn.module): The model is created to train
     train_loader (pytorch data loader): Training data loader
     optimizer (optimizer.*): A instance of some sort of optimizer, usually SGD
     criterion (nn.CrossEntropyLoss) : Loss function used to train the network
